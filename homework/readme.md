@@ -10,3 +10,5 @@
 [修改布局配置 src/main.py](../src/main.py#L12)
 
 [生成 PPT 文件 ../outputs/ChatPPT_Demo.pptx](../outputs/ChatPPT_Demo.pptx)
+
+![alt text](image.png)
