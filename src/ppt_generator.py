@@ -7,7 +7,9 @@ def generate_presentation(powerpoint_data, template_path: str, output_path: str)
         raise FileNotFoundError(f"Template file '{template_path}' does not exist.")
 
     prs = Presentation(template_path)
+    
     remove_all_slides(prs)
+
     prs.core_properties.title = powerpoint_data.title
 
     for slide in powerpoint_data.slides:
