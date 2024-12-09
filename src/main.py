@@ -9,8 +9,6 @@ from logger import LOG  # 引入 LOG 模块
 
 # 定义主函数，处理输入并生成 PowerPoint 演示文稿
 def main(input_file):
-    config = Config()  # 加载配置文件
-
     # 检查输入的 markdown 文件是否存在
     if not os.path.exists(input_file):
         LOG.error(f"{input_file} 不存在。")  # 如果文件不存在，记录错误日志
@@ -20,6 +18,11 @@ def main(input_file):
     with open(input_file, 'r', encoding='utf-8') as file:
         input_text = file.read()
 
+    generate_pptx_from_markdown(input_text)
+
+# 从 markdown 生成 pptx, 方便 gradio 使用
+def generate_pptx_from_markdown(input_text):
+    config = Config()  # 加载配置文件
     # 加载 PowerPoint 模板，并打印模板中的可用布局
     prs = load_template(config.ppt_template)  # 加载模板文件
     LOG.info("可用的幻灯片布局:")  # 记录信息日志，打印可用布局
@@ -38,6 +41,8 @@ def main(input_file):
     
     # 调用 generate_presentation 函数生成 PowerPoint 演示文稿
     generate_presentation(powerpoint_data, config.ppt_template, output_pptx)
+
+    return output_pptx
 
 # 程序入口
 if __name__ == "__main__":
