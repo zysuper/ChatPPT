@@ -89,14 +89,14 @@ with gr.Blocks(
     gr.Markdown("## ChatPPT")
 
     # 定义语音（mic）转文本的接口
-    # gr.Interface(
-    #     fn=transcribe,  # 执行转录的函数
-    #     inputs=[
-    #         gr.Audio(sources="microphone", type="filepath"),  # 使用麦克风录制的音频输入
-    #     ],
-    #     outputs="text",  # 输出为文本
-    #     flagging_mode="never",  # 禁用标记功能
-    # )
+    gr.Interface(
+        fn=transcribe,  # 执行转录的函数
+        inputs=[
+            gr.Audio(sources="microphone", type="filepath"),  # 使用麦克风录制的音频输入
+        ],
+        outputs="text",  # 输出为文本
+        flagging_mode="never",  # 禁用标记功能
+    )
 
     # 创建聊天机器人界面，提示用户输入
     contents_chatbot = gr.Chatbot(
