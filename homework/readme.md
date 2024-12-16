@@ -16,10 +16,10 @@ mkcert zysuper.com "*.zysuper.com" 172.22.0.2
 
 ![image](demo.png)
 
-- [docker-compose.yml 配置](docker-compose.yml)
-- [nginx.conf 配置](nginx.conf)
-- [Dockerfile 配置](Dockerfile)
-- [pptx 文件](稀土元素的重要性.pptx)
+- [docker-compose.yml 配置](../docker/docker-compose.yml)
+- [nginx.conf 配置](../docker/nginx.conf)
+- [Dockerfile 配置](../Dockerfile)
+- [pptx 文件](./稀土元素的重要性.pptx)
 
-1. TODO:: 不太安全，还是算了
+2. TODO:: 不太安全，还是算了
 
