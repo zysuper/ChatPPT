@@ -45,6 +45,8 @@ class ImageAdvisor(ABC):
             model="gpt-4o-mini",
             temperature=0.7,
             max_tokens=4096,
+            api_key=os.getenv("OPENAI_HK_API_KEY"),
+            base_url="https://api.openai-hk.com/v1",
         )
         self.advisor = chat_prompt | self.model
 

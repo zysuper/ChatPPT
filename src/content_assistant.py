@@ -1,4 +1,5 @@
 # content_assistant.py
+import os
 from abc import ABC, abstractmethod
 
 from langchain_openai import ChatOpenAI
@@ -42,6 +43,8 @@ class ContentAssistant(ABC):
             model="gpt-4o-mini",
             temperature=0.5,
             max_tokens=4096,
+            api_key=os.getenv("OPENAI_HK_API_KEY"),
+            base_url="https://api.openai-hk.com/v1",
         )
 
         self.assistant = system_prompt | self.model  # 使用的模型名称)
