@@ -23,7 +23,7 @@
 
 - [src/chatbot.py](../src/chatbot.py#L43)
 - [src/writer_and_reflect_agent.py](../src/writer_and_reflect_agent.py)
-- [src/gradio_server.py](../src/gradio_server.py)
+- [src/gradio_server.py](../src/gradio_server.py#L79)
 
 ## 结果展示
 ![langsmith](./langsmith.png)
